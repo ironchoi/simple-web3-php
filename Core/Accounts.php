@@ -9,10 +9,10 @@
  * @license MIT 
  */
 
-namespace SWeb3;
+namespace SimpleWeb3;
  
 
-use SWeb3\Utils;
+use SimpleWeb3\Utils;
 use Elliptic\EC;
 use kornrunner\Keccak;
 use stdClass;
