@@ -1,5 +1,5 @@
 {
-    "name": "sleepfinance/simple-web3-php",
+    "name": "ironchoi/simple-web3-php",
     "description": "Web3 library in PHP",
     "keywords": [
         "ethereum",
@@ -17,9 +17,9 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "drlecks",
-            "email": "contacte@powdercode.com",
-            "homepage": "https://github.com/drlecks/Simple-Web3-Php"
+            "name": "ironchoi",
+            "email": "ironchoi@163.com",
+            "homepage": "https://github.com/ironchoi/Simple-Web3-Php"
         }
     ],
     "require": {
