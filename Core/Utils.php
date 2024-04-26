@@ -16,7 +16,7 @@
  * @license MIT
  */
 
-namespace SWeb3;
+namespace SimpleWeb3;
 
 
 use stdClass;
