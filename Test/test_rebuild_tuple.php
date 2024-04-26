@@ -1,6 +1,6 @@
 <?php
 
-namespace SWeb3;
+namespace SimpleWeb3;
 use \stdClass;
 
 include_once("../vendor/autoload.php");
