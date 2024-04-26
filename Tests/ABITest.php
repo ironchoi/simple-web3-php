@@ -2,7 +2,7 @@
 
 namespace Tests;
 
-use SWeb3\ABI;
+use SimpleWeb3\ABI;
 use Tests\Fixtures\AddressFixture;
 use Tests\Fixtures\ArrayFixture;
 use Tests\TestCase;
