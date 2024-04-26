@@ -9,11 +9,11 @@
  * @license MIT 
  */
 
-namespace SWeb3; 
+namespace SimpleWeb3; 
 
 use stdClass;
 use Exception;
-use SWeb3\Utils;
+use SimpleWeb3\Utils;
 use kornrunner\Ethereum\Transaction;
 use phpseclib\Math\BigInteger as BigNumber;
 
