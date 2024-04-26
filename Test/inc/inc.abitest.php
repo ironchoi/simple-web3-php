@@ -1,8 +1,8 @@
 <?php
 
-namespace SWeb3;
+namespace SimpleWeb3;
 use \stdClass;
-use SWeb3\ABI;
+use SimpleWeb3\ABI;
 
 class abitest {
 	static function abiForDecodingInput($abi, $filter_function = false) {
