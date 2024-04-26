@@ -11,7 +11,7 @@
 
 //https://docs.soliditylang.org/en/develop/abi-spec.html
 
-namespace SWeb3;
+namespace SimpleWeb3;
 
 abstract class VariableType
 {
