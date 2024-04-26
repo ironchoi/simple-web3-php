@@ -8,7 +8,7 @@
  * @license MIT 
  */
 
-namespace SWeb3;
+namespace SimpleWeb3;
 
 ini_set('display_errors', '1');
 ini_set('display_startup_errors', '1');
@@ -17,10 +17,10 @@ include_once("../vendor/autoload.php");
 include_once("inc/inc.wtest.php");
 
 use stdClass;
-use SWeb3\Accounts; 
-use SWeb3\ABI; 
-use SWeb3\SWeb3; 
-use SWeb3\SWeb3_Contract; 
+use SimpleWeb3\Accounts; 
+use SimpleWeb3\ABI; 
+use SimpleWeb3\SWeb3; 
+use SimpleWeb3\SWeb3_Contract; 
 
 use WTest; 
 
