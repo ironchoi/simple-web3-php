@@ -216,7 +216,8 @@ class ABI
     {
         $signature = "(";
         foreach ($function_inputs as $input) {
-            $type = $input->type;
+            $input_type = is_string($input) ? $input : $input->type;
+            $type = $input_type;
             if ($type == 'tuple') $type = $this->GetSignatureFromFunction_Inputs($input->components);
             else if ($type == 'tuple[]') $type = $this->GetSignatureFromFunction_Inputs($input->components) . '[]';
             else if ($type == 'uint' || $type == 'int') $type .= '256';
@@ -244,7 +245,8 @@ class ABI
         } else {
             $tempData = $data;
             $input = $function->inputs[0];
-            $input_array_dimension = substr_count($input->type, '[');
+            $input_type = is_string($input) ? $input : $input->type;
+            $input_array_dimension = substr_count($input_type, '[');
 
             while ($input_array_dimension > 0) {
                 if (is_array($tempData[0])) {
@@ -269,7 +271,8 @@ class ABI
         $currentDynamicIndex = 0; {
             $staticInputCount = 0;
             foreach ($inputs as $input) {
-                $varType = self::GetParameterType($input->type);
+                $input_type = is_string($input) ? $input : $input->type;
+                $varType = self::GetParameterType($input_type);
 
                 // for non-tuple item, we'll have in-place value or offset
                 if ($varType != VariableType::Tuple) {
@@ -418,12 +421,12 @@ class ABI
             $input_type = is_string($input) ? $input : $input->type;
             $varType = self::GetParameterType($input_type);
             //dynamic
-            if (Utils::string_contains($input->type, '[]')) {
+            if (Utils::string_contains($input_type, '[]')) {
                 $input->hash =  self::EncodeInput_Array($input, $inputData);
                 $res = self::EncodeInput_UInt($currentDynamicIndex);
                 return $res;
-            } else if (preg_match_all('/\[(\d+)\]/', $input->type, $matches)) {
-                $typeStr = str_replace($matches[0], "", $input->type);
+            } else if (preg_match_all('/\[(\d+)\]/', $input_type, $matches)) {
+                $typeStr = str_replace($matches[0], "", $input_type);
                 $inferredType = [];
                 for ($i = 0; $i < (int)$matches[1][0]; $i++) {
                     $inferredInput = new stdClass();
