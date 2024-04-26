@@ -9,11 +9,11 @@
  * @license MIT 
  */
 
-namespace SWeb3;
+namespace SimpleWeb3;
  
 
-use SWeb3\Utils;
-use SWeb3\SWeb3;
+use SimpleWeb3\Utils;
+use SimpleWeb3\SWeb3;
 use stdClass;
 use Exception; 
  
