@@ -2,7 +2,7 @@
 
 namespace Tests;
 
-use SWeb3\Utils;
+use SimpleWeb3\Utils;
 
 class TestCase extends  \PHPUnit\Framework\TestCase
 {
