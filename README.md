@@ -1,6 +1,6 @@
 # simple-web3-php
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/drlecks/simple-web3-php.svg?style=flat-square)](https://packagist.org/packages/drlecks/simple-web3-php)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/ironchoi/simple-web3-php.svg?style=flat-square)](https://packagist.org/packages/ironchoi/simple-web3-php)
 [![Join the chat at https://gitter.im/drlecks/Simple-Web3-Php](https://img.shields.io/badge/gitter-join%20chat-brightgreen.svg)](https://gitter.im/Simple-Web3-Php/community)
 [![Licensed under the MIT License](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/drlecks/Simple-Web3-Php/blob/master/LICENSE)
 
@@ -29,25 +29,25 @@ A php interface for interacting with the Ethereum blockchain and ecosystem.
 
 ### Latest stable release
 ```
-composer require drlecks/simple-web3-php "^0.10.0"
+composer require ironchoi/simple-web3-php "^0.10.0"
 ```
 
 Or you can add this line in composer.json
 
 ```
-"drlecks/simple-web3-php": "^0.10.0"
+"ironchoi/simple-web3-php": "^0.10.0"
 ```
 
 
 ### Development (main branch)
 ```
-composer require drlecks/simple-web3-php dev-master
+composer require ironchoi/simple-web3-php dev-master
 ```
 
 Or you can add this line in composer.json
 
 ```
-"drlecks/simple-web3-php": "dev-master"
+"ironchoi/simple-web3-php": "dev-master"
 ```
 
 
