@@ -55,7 +55,7 @@ Or you can add this line in composer.json
 
 ### New instance
 ```php
-use SWeb3\SWeb3;
+use SimpleWeb3\SWeb3;
 //initialize SWeb3 main object
 $sweb3 = new SWeb3('http://ethereum.node.provider:optional.node.port');
 
@@ -71,7 +71,7 @@ $sweb3->setPersonalData($from_address, $from_address_private_key);
 
 Hex to Big Number: 
 ```php 
-use SWeb3\Utils;
+use SimpleWeb3\Utils;
  
 $res = $sweb3->call('eth_blockNumber', []);
 $bigNum = Utils::hexToBn($res->result);
@@ -152,8 +152,8 @@ $sweb3->batch(false);
 
 ### Account
 ```php 
-use SWeb3\Accounts; 
-use SWeb3\Account;
+use SimpleWeb3\Accounts; 
+use SimpleWeb3\Account;
 
 //create new account privateKey/address (returns Account)
 $account = Accounts::create();
@@ -170,7 +170,7 @@ $res = $account2->sign('Some data');
 ### Contract interaction
 
 ```php
-use SWeb3\SWeb3_Contract;
+use SimpleWeb3\SWeb3_Contract;
 
 $contract = new SWeb3_contract($sweb3, '0x2222222222222222222222222222222222222222', '[ABI...]'); //'0x2222...' is contract address
   
@@ -194,7 +194,7 @@ $res = $contract->getLogs();
 ### Contract creation (deployment)
 
 ```php
-use SWeb3\SWeb3_Contract;
+use SimpleWeb3\SWeb3_Contract;
  
 $creation_abi = '[abi...]';
 $contract = new SWeb3_contract($sweb3, '', $creation_abi);
@@ -212,11 +212,11 @@ $result = $contract->deployContract( [123123],  $extra_params);
 ### Usual required includes
 
 ```php 
-use SWeb3\SWeb3;                            //always needed, to create the Web3 object
-use SWeb3\Utils;                            //sweb3 helper classes (for example, hex conversion operations)
-use SWeb3\SWeb3_Contract;                   //contract creation and interaction
-use SWeb3\Accounts;                   		//account creation
-use SWeb3\Account;                   		//single account management (signing)
+use SimpleWeb3\SWeb3;                            //always needed, to create the Web3 object
+use SimpleWeb3\Utils;                            //sweb3 helper classes (for example, hex conversion operations)
+use SimpleWeb3\SWeb3_Contract;                   //contract creation and interaction
+use SimpleWeb3\Accounts;                   		//account creation
+use SimpleWeb3\Account;                   		//single account management (signing)
 use phpseclib\Math\BigInteger as BigNumber; //BigInt handling
 use stdClass;                               //for object interaction 
 ```
@@ -302,5 +302,5 @@ MIT
 # DONATIONS (ETH)
  
 ``` 
-0x4a890A7AFB7B1a4d49550FA81D5cdca09DC8606b
+0xDf7EA86912776edB41AbB9933340a43cb5FcE0C1
 ```
